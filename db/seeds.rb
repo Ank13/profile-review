@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+3.times do
+  Profile.create({name: Faker::Name.first_name,
+                  essay1: Faker::Lorem.paragraph,
+                  essay2: Faker::Lorem.paragraph})
+end

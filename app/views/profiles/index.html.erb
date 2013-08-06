@@ -1,1 +1,8 @@
 <p>Welcome!</p>
+
+
+<% @profiles.each do |profile| %>
+  <h3><%= profile.name %> </h3>
+  <p><%= profile.essay1 %> </p>
+  <p><%= profile.essay2 %> </p>
+<% end  %>
