@@ -1,8 +1,19 @@
-<p>Welcome!</p>
+<div class="container">
 
+<div class="masthead">
+  <p>Welcome!</p>
+</div>
 
-<% @profiles.each do |profile| %>
-  <h3><%= profile.name %> </h3>
-  <p><%= profile.essay1 %> </p>
-  <p><%= profile.essay2 %> </p>
-<% end  %>
+<div class="create-new-profile">
+  <h3>Upload one of your profiles and get feedback</h3>
+  <%= link_to "Create profile", new_profile_path %>
+</div>
+
+<div class="rate-profiles">
+  <h3>Click a profile name and help make it better</h3>
+  <ol><% @profiles.each do |profile| %>
+    <li><%= link_to profile.name, profile %> </li>
+  <% end  %></ol>
+</div>
+
+</div>
