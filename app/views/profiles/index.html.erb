@@ -5,15 +5,11 @@
 </div>
 
 <div class="create-new-profile">
-  <h3>Upload one of your profiles and get feedback</h3>
-  <%= link_to "Create profile", new_profile_path %>
-</div>
+  <h3>Enter profile essays and get feedback!</h3>
+  <button id="create-profile" class="regular-button main-buttons">Submit profile essays to receive feedback</button>
+  <br>
+  <button id="improve-profiles" class="regular-button main-buttons">Improve other essays and earn points</button>
 
-<div class="rate-profiles">
-  <h3>Click a profile name and help make it better</h3>
-  <ol><% @profiles.each do |profile| %>
-    <li><%= link_to profile.name, profile %> </li>
-  <% end  %></ol>
-</div>
+  <div id="view-here"></div>
 
 </div>
