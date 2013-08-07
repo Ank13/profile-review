@@ -1,7 +1,19 @@
 <div class="container">
+
   <div class="create-new-profile">
-    <h1> <%= @profile.name %> </h1>
-    <p> <%= @profile.essay1 %> </p>
-    <p>Your link:  <%= link_to "/"+@profile.url, profile_path(@profile.url) %> </p><br>
+
+    <% if @errors %>
+      <h1><%= @errors %></h1>
+    <% else %>
+      <h1> <%= @profile.name %> </h1>
+      <p> <%= @profile.essay1 %> </p>
+      <p>Your link:  <%= link_to "/"+@profile.url, profile_path(@profile.url) %> </p><br>
+    <% end %>
+
   </div>
+
+  <a href="/">Return</a>
+
 </div>
+
+

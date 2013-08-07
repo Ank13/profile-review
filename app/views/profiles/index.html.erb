@@ -1,14 +1,25 @@
 <div class="container">
 
-<div class="masthead">
-  <h1>Welcome! Enter profile essays and get feedback!</h1>
+  <div class="masthead">
+    <h1>Welcome! Enter profile essays and get feedback!</h1>
+  </div>
+
+  <div class="create-new-profile">
+
+    <button id="create-profile" class="regular-button main-buttons">Submit your essays to receive feedback</button>
+    <button id="improve-profiles" class="regular-button main-buttons">Give feedback & earn points</button>
+
+    <div id="view-here"></div>
+
+  </div>
+
 </div>
 
-<div class="create-new-profile">
 
-  <button id="create-profile" class="regular-button main-buttons">Submit your essays to receive feedback</button>
-  <button id="improve-profiles" class="regular-button main-buttons">Give feedback & earn points</button>
-
-  <div id="view-here"></div>
-
+<!-- TODO: Delete this section after adding edit ability. Just for reference.  -->
+<br> <br>
+<div>
+  <% @profiles.each do |profile| %>
+    <%= link_to profile.name, profile_path(profile.url) %> <br>
+  <% end %>
 </div>

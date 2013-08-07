@@ -15,10 +15,10 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    # 4C98TYI5SB3D
-    # find profile by custom URL
+    # find profile by custom URL, such as 4C98TYI5SB3D
     @profile = Profile.find_by_url(params[:id])
-    # redirect_to :index if @profile.nil?
+    # send errors if not found
+    @errors = "Not a valid URL. Please check again" if @profile.nil?
   end
 
 end

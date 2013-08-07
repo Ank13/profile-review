@@ -5,15 +5,20 @@ body, .masthead, #view-here{
 
 .container {
   width: 95%;
-  margin: auto;
-  margin-top: 35px;
+  margin: 10px auto;
   color: white;
   font-family: Arial, serif;
 }
 
-.container a {
+a {
+  margin-top: 1em;
   color: white;
   text-decoration: none;
+  background-color: #7f8c8d;
+}
+
+a:hover {
+  background-color: #bdc3c7;
 }
 
 .create-new-profile {
