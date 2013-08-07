@@ -6,7 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-3.times do
-  Profile.create({name: Faker::Name.first_name,
-                  essay1: Faker::Lorem.paragraph})
+5.times do
+  p = Profile.new(name: Faker::Name.first_name,
+                  essay1: Faker::Lorem.paragraph(10))
+
+  3.times do
+    p.comments.build(feedback: Faker::Lorem.paragraph(3))
+  end
+
+  p.save
 end

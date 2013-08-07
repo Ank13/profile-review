@@ -1,6 +1,8 @@
 class Profile < ActiveRecord::Base
   attr_accessible :name, :essay1, :essay2, :url
 
+  has_many :comments
+
   before_save :make_custom_url
 
   def make_custom_url

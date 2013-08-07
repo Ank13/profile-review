@@ -26,6 +26,7 @@ $(document).ready(function(){
   // shows an essay to rate when user clicks 'give feedback'
   $('.container').on('click', '#improve-profiles', function(event){
     event.preventDefault()
+    $('#view-here').append("<h1>Loading...</h1>")
     $('.main-buttons').hide()
     var url = '/get_one_to_rate'
     $.get(url, function(response){
