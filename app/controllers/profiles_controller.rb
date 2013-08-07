@@ -10,10 +10,15 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    puts "***************************"
-    p params['profile']
     @profile = Profile.create(params['profile'])
     render :_thanks_for_posting, layout: false
+  end
+
+  def show
+    # 4C98TYI5SB3D
+    # find profile by custom URL
+    @profile = Profile.find_by_url(params[:id])
+    # redirect_to :index if @profile.nil?
   end
 
 end

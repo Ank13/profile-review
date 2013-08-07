@@ -1,10 +1,11 @@
 <p>
   Thanks for sharing essays.
-  Here is a link to share to get feedback:
 </p>
 <p>
-  This is what we saved:
+  <span class="description">This is your custom URL (save this!):</span><br>
+  <%= link_to "/"+@profile.url, profile_path(@profile.url) %> <br>
+  <span class="description">Profile name: </span><br>
   <%= @profile.name %> <br>
+  <span class="description">Essay: </span><br>
   <%= @profile.essay1 %> <br>
-  <%= @profile.essay2 %>
 </p>

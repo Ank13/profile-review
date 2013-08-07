@@ -14,7 +14,7 @@ $(document).ready(function(){
   $('.container').on('click', '#submit-essays', function(event){
     event.preventDefault()
 
-    $('.mainbuttons').show()
+    $('.main-buttons').show()
     url = 'profiles'
     data = $('form').serialize()
     console.log(data)

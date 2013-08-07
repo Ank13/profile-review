@@ -3,7 +3,7 @@ class CreateProfiles < ActiveRecord::Migration
     create_table :profiles do |t|
       t.string :name
       t.string :essay1
-      t.string :essay2
+      t.string :url
 
       t.timestamps
     end

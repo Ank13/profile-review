@@ -1,6 +1,5 @@
 <%= form_for @profile do |p| %>
   <%= p.text_field :name, :placeholder => "Enter a name for this submission" %><br>
   <%= p.text_area :essay1, :placeholder => "Enter your essay text" %><br>
-  <%= p.text_area :essay2, :placeholder => "Enter your essay text" %><br>
-  <%= p.submit class: "regular-button", id: "submit-essays" %>
+  <%= p.submit class: "regular-button", id: "submit-essays", value: "Click to Submit" %>
 <% end %>

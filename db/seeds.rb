@@ -8,6 +8,5 @@
 
 3.times do
   Profile.create({name: Faker::Name.first_name,
-                  essay1: Faker::Lorem.paragraph,
-                  essay2: Faker::Lorem.paragraph})
+                  essay1: Faker::Lorem.paragraph})
 end
