@@ -14,6 +14,11 @@ class ProfilesController < ApplicationController
     render :_thanks_for_posting, layout: false
   end
 
+  def get_one_to_rate
+    @profile = Profile.all.sample
+    render :_show, layout: false
+  end
+
   def show
     # find profile by custom URL, such as 4C98TYI5SB3D
     @profile = Profile.find_by_url(params[:id])
