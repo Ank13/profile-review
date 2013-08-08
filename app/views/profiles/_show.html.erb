@@ -2,11 +2,13 @@
 <p> <%= @profile.essay1 %> </p>
 <p>Your link to edit:  <%= link_to "/"+@profile.url, profile_path(@profile.url) %> </p><br>
 
-<button id="add-comment" class="regular-button">Add Comment</button>
+<button id="add-comment" data-profile-id="<%= @profile.id %>" class="regular-button">Add Comment</button>
 <button id="improve-profiles" class="regular-button">Skip this one</button>
 <br><a href="/">Return</a>
 
-<h2 class="section-header">Comments:</h2>
-<% @comments.each do |comment| %>
-  <p><%= comment.feedback %> </p><hr>
-<% end %>
+<div class="comments-section">
+  <h2 class="section-header">Comments:</h2>
+  <% @comments.each do |comment| %>
+    <p><%= comment.feedback %> </p><hr>
+  <% end %>
+</div>

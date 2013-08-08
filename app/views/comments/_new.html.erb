@@ -1,0 +1,4 @@
+<%= form_for @comment, url: profile_comments_path(@profile) do |p| %>
+  <%= p.text_area :feedback, :placeholder => "Enter your feedback." %><br>
+  <%= p.submit class: "regular-button", id: "submit-comment", value: "Click to Submit" %>
+<% end %>
